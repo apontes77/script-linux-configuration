@@ -82,16 +82,18 @@ sudo apt install code -y
 # sudo dpkg -i teams.deb
 # sudo apt install ./teams.deb
 
-# Install Microsoft Edge
-curl https://packages.microsoft.com/keys/microsoft.asc | gpg --dearmor > microsoft.gpg
-sudo install -o root -g root -m 644 microsoft.gpg /usr/share/keyrings/
-sudo sh -c 'echo "deb [arch=amd64 signed-by=/usr/share/keyrings/microsoft.gpg] https://packages.microsoft.com/repos/edge stable main" > /etc/apt/sources.list.d/microsoft-edge-beta.list'
-sudo rm microsoft.gpg
-sudo apt update
-sudo apt install microsoft-edge-beta -y
-
 # Install Google Chrome
-# sudo apt update
-# wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
-# sudo dpkg -i google-chrome-stable_current_amd64.deb
+sudo apt update
+wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
+sudo dpkg -i google-chrome-stable_current_amd64.deb
 
+
+# Install for Pop Os With Nvidia Graphics
+sudo apt-add-repository -y ppa:system76-dev/stable
+sudo apt-get update
+sudo apt install system76-driver
+
+#Install sdkman
+
+curl -s "https://get.sdkman.io" | bash
+source "$HOME/.sdkman/bin/sdkman-init.sh"
