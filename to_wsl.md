@@ -12,3 +12,7 @@ comando 1:
 comando 2: 
 
 `New-NetFireWallRule -Profile Private -DisplayName 'MyRule ports for LAN development' -Direction Inbound -LocalPort 19000-19006 -Action Allow -Protocol TCP`
+
+
+Fórum para referência futura:
+ https://superuser.com/questions/1131874/how-to-access-localhost-of-linux-subsystem-from-windows
