@@ -52,8 +52,6 @@ sudo groupadd docker
 
 sudo usermod -aG docker $USER
 
-newgrp docker
-
 docker run hello-world
 
 # Install Docker Compose
@@ -89,9 +87,9 @@ sudo dpkg -i google-chrome-stable_current_amd64.deb
 
 
 # Install for Pop Os With Nvidia Graphics
-sudo apt-add-repository -y ppa:system76-dev/stable
-sudo apt-get update
-sudo apt install system76-driver
+# sudo apt-add-repository -y ppa:system76-dev/stable
+# sudo apt-get update
+# sudo apt install system76-driver
 
 #Install sdkman
 
